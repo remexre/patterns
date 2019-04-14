@@ -55,43 +55,43 @@ Alternatively, we can specify the lints that we want to `deny` in the code.
 Here is a list of warning lints that is (hopefully) safe to deny:
 
 ```rust
-#[deny(bad-style,
-       const-err,
-       dead-code,
-       extra-requirement-in-impl,
-       improper-ctypes,
-       legacy-directory-ownership,
-       non-shorthand-field-patterns,
-       no-mangle-generic-items,
-       overflowing-literals,
-       path-statements ,
-       patterns-in-fns-without-body,
-       plugin-as-library,
-       private-in-public,
-       private-no-mangle-fns,
-       private-no-mangle-statics,
-       raw-pointer-derive,
-       safe-extern-statics,
-       unconditional-recursion,
-       unions-with-drop-fields,
-       unused,
-       unused-allocation,
-       unused-comparisons,
-       unused-parens,
-       while-true)]
+#![deny(
+    bad_style,
+    const_err,
+    dead_code,
+    improper_ctypes,
+    legacy_directory_ownership,
+    no_mangle_generic_items,
+    non_shorthand_field_patterns,
+    overflowing_literals,
+    path_statements,
+    patterns_in_fns_without_body,
+    plugin_as_library,
+    private_in_public,
+    safe_extern_statics,
+    unconditional_recursion,
+    unions_with_drop_fields,
+    unused,
+    unused_allocation,
+    unused_comparisons,
+    unused_parens,
+    while_true
+)]
 ```
 
 In addition, the following `allow`ed lints may be a good idea to `deny`:
 
 ```rust
-#[deny(missing-debug-implementations,
-       missing-docs,
-       trivial-casts,
-       trivial-numeric-casts,
-       unused-extern-crates,
-       unused-import-braces,
-       unused-qualifications,
-       unused-results)]
+#![deny(
+    missing_debug_implementations,
+    missing_docs,
+    trivial_casts,
+    trivial_numeric_casts,
+    unused_extern_crates,
+    unused_import_braces,
+    unused_qualifications,
+    unused_results
+)]
 ```
 
 Some may also want to add `missing-copy-implementations` to their list.
